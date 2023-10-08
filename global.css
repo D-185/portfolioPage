@@ -1,0 +1,24 @@
+:root {
+    /* fonts */
+    --font-poppins: Poppins;
+    --buttons-big: "DM Sans";
+
+    /* font sizes */
+    --font-size-small: 14px;
+    --font-size-base: 16px;
+    --font-size-normal: 18px;
+    --font-size-large: 28px;
+    --font-size-ExLarge: 32px;
+    --font-size-big: 48px;
+
+    /* Colors */
+    --color-white: #fff;
+    --solid-heading: #42446e;
+    --dark-content: #666;
+    --color-black: #000;
+    --primary-color: #013456;
+    --accent-color: #FAD405;
+    --dark-mode: #191919;
+    --light-content: #a7a7a7;
+    
+}
