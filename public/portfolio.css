@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background: #f7f7f7;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.portfolioPageWrap {
+    margin: auto;
+}
+
+.portfolioPageWrap .headerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0rem;
+    z-index: 1000;
+    height: 6.5rem;
+    background-color: #fff;
+    padding: 1.7rem 10%;
+    /* box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3); */
+}
+
+.portfolioPageWrap .headerWrap .logoWrap {
+    text-align: center;
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-family: Poppins;
+}
+
+.portfolioPageWrap .headerWrap .logoWrap .logo {
+    font-size: 1.9rem;
+}
+
+.portfolioPageWrap .headerWrap .logoWrap .name {
+    font-size: 1.1rem;
+}
+
+.portfolioPageWrap .headerWrap .navBarWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolioPageWrap .headerWrap .navBarWrap .navBar {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #666666;
+}
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap {
+    margin-right: 2.5rem;
+}
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .hamburger{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+.portfolioPageWrap .headerWrap .navBarWrap .navBar  .rowWrap a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 1.57rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04rem;
+    transition: 0.2s;
+}
+.portfolioPageWrap .headerWrap .navBarWrap .navBar  .rowWrap a:hover{
+    color: #011aff;
+    border-bottom: 0.2rem solid #011aff;
+}
+.portfolioPageWrap .headerWrap .navBarWrap .navBar  .rowWrap a:active{
+    padding: 0.5rem 0;
+}
+
+.portfolioPageWrap .headerWrap .navBarWrap .socialLinkWrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #666;
+}
+.portfolioPageWrap .headerWrap .navBarWrap .socialLinkWrap .socialActive{
+    margin-right: 8px;
+}
+
+.portfolioPageWrap .headerWrap .socialLinkWrap a {
+    font-size: 2rem;
+    display: inline-block;
+    color: #666;
+    background-color: #fff;
+    text-align: center;
+}
+
+.portfolioPageWrap .headerWrap .socialLinkWrap a:active,
+.portfolioPageWrap .headerWrap .socialLinkWrap a:focus,
+.portfolioPageWrap .headerWrap .socialLinkWrap a:hover {
+    color: #0685da;
+}
+
+.portfolioPageWrap .homeWrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 9%
+
+}
+.portfolioPageWrap .homeWrap .introWrap {
+    font-family: var(--font-poppins);
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.portfolioPageWrap .homeWrap .introWrap .wave {
+    animation-name: waveAnimation;
+    animation-duration: 2.1s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+.portfolioPageWrap .homeWrap .introWrap .typeWriterWrap{
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.portfolioPageWrap .homeWrap .introWrap .developerName {
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolioPageWrap .homeWrap .profileImageWrap{
+}
+.portfolioPageWrap .homeWrap .profileImageWrap .imageWrap{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 21px rgba(0, 0, 0, 0.3);
+}
+
+.portfolioPageWrap .techStackTitleWrap {
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    min-height: 35vh;
+    padding: 2rem 9%;
+}
+.portfolioPageWrap .techStackTitleWrap .title {
+    color: #42446E;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.portfolioPageWrap .techStackTitleWrap .description{
+    color: #666;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.portfolioPageWrap .techStackIcons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 2rem 9%;
+
+}
+.portfolioPageWrap .techStackIcons .iconWrap{
+    flex: 0 1 calc(26.3% - 2rem);
+    text-align: center;
+}
+
+.portfolioPageWrap .projectCardTitleWrap {
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    min-height: 35vh;
+    padding: 2rem 9%;
+}
+.portfolioPageWrap .projectCardTitleWrap .title {
+    color: #42446E;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.portfolioPageWrap .projectCardTitleWrap .description{
+    color: #666;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.portfolioPageWrap .projectCardsWrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+
+}
+.portfolioPageWrap .projectCardsWrap .colWrap{
+    flex: 0 1 calc(26.3% - 2rem);
+    text-align: center;
+}
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder{
+    border-radius: 10px;
+    box-shadow: 2px 2px 100px rgba(0,0,0,0.2);
+    margin: 22px;
+    overflow: hidden;
+}
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage{
+    text-align: left;
+    width: 100%;
+}
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage img{
+    height: 16vw;
+    width: 100%;
+}
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent{
+    padding: 20px;
+}
+
+
+
+
+
+
+/* Media Query section */
+@media (max-width: 1440px){
+
+}
+@media (max-width: 1160px){
+    .portfolioPageWrap .homeWrap .introWrap{
+        font-size: 4rem;
+    }
+}
+@media (max-width: 780px){
+    .portfolioPageWrap .headerWrap .navBarWrap .socialLinkWrap {
+        display: none;
+    }
+    .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap{
+        width: 60%;
+    }
+
+}
+@media (max-width: 576px){
+
+}
+@media (max-width: 375px){
+
+}
