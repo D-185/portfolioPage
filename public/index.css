@@ -1,3 +1,7 @@
+#load{
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -125,7 +129,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 2rem 9%
 
 }
@@ -197,13 +201,16 @@ body{
     border-radius: 50%;
     box-shadow: 0 2px 21px rgba(0, 0, 0, 0.3);
 }
+.portfolioPageWrap .techStackWrap {
+    min-height: 50rem;
+    padding: 15rem 9%;
+}
 
 .portfolioPageWrap .techStackTitleWrap {
     text-align: center;
     font-family: Poppins;
     font-style: normal;
-    min-height: 35vh;
-    padding: 2rem 9%;
+    min-height: 15rem;
 }
 .portfolioPageWrap .techStackTitleWrap .title {
     color: #42446E;
@@ -230,13 +237,15 @@ body{
     flex: 0 1 calc(26.3% - 2rem);
     text-align: center;
 }
-
+.portfolioPageWrap .projectWrap {
+    min-height: 15rem;
+    padding: 9rem 9%;
+}
 .portfolioPageWrap .projectCardTitleWrap {
     text-align: center;
     font-family: Poppins;
     font-style: normal;
-    min-height: 35vh;
-    padding: 2rem 9%;
+
 }
 .portfolioPageWrap .projectCardTitleWrap .title {
     color: #42446E;
@@ -254,11 +263,11 @@ body{
 .portfolioPageWrap .projectCardsWrap{
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem 9%;
+    padding: 2rem 0;
 
 }
 .portfolioPageWrap .projectCardsWrap .colWrap{
-    flex: 0 1 calc(26.3% - 2rem);
+    flex: 1 1 calc(33.3% - 1rem);
     text-align: center;
 }
 
@@ -278,12 +287,111 @@ body{
 }
 
 .portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent{
-    padding: 20px;
+    padding: 1rem;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+}
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent .cardHeader{
+    font-size: 1.37rem;
+    font-weight: 700;
+}
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent .cardDescription{
+    height: 6rem;
+    padding: 10px 0;
+    text-overflow: ellipsis; 
+}
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardFooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardFooter a{
+    text-decoration: none;
+    color: #4183c4;
+}
+
+.portfolioPageWrap .footer{
+    padding: 9rem 9%;
+}
+.portfolioPageWrap .footer .contactWrap{
+    border-bottom: 2px solid #666666;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+    align-items: center;
+}
+.portfolioPageWrap .footer .contactWrap .conatctEmail{
+    padding-left: 2.5rem;
+}
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap{
+    padding-left: 2.5rem;
+}
+
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #666;
+}
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap .socialActive{
+    margin-right: 8px;
+}
+
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap a {
+    font-size: 1.5rem;
+    display: inline-block;
+    color: #666;
+    background-color: #fff;
+    text-align: center;
+}
+
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap a:active,
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap a:focus,
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap a:hover {
+    color: #0685da;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.5rem;
 }
 
 
-
-
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar {
+    display: flex;
+    font-family: DM Sans;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap {
+    margin-right: 2.5rem;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap .hamburger{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar  .rowWrap a {
+    text-decoration: none;
+    color: #666666;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04rem;
+    transition: 0.2s;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar  .rowWrap a:hover{
+    color: #011aff;
+    border-bottom: 0.2rem solid #011aff;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar  .rowWrap a:active{
+    padding: 0.5rem 0;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap .creditWrap .nameWrap{
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 /* Media Query section */
@@ -300,12 +408,14 @@ body{
         display: none;
     }
     .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap{
-        width: 60%;
+        width: 20rem;
     }
 
 }
 @media (max-width: 576px){
-
+    .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap{
+        width: 12rem;
+    }
 }
 @media (max-width: 375px){
 

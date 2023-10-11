@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio Page</title>
   <link rel="stylesheet" href="./global.css">
-  <link rel="stylesheet" href="./portfolio.css">
+  <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400;500&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <!-- update the version number as needed -->
@@ -32,12 +32,13 @@
   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
   <style media="screen">
-    
+
   </style>
 </head>
 
 <body>
   <div class="portfolioPageWrap">
+    <!-- Navigation bar start from here -->
     <div class="headerWrap">
       <div class="logoWrap">
         <div class="logo">
@@ -59,7 +60,7 @@
             <a class="activeNav" href="#techStack">TechStack</a>
           </span>
           <span class="rowWrap">
-            <a class="activeNav" href="#projects">Projects</a>
+            <a class="activeNav" href="#projectCard">Projects</a>
           </span>
           <span class="rowWrap">
             <a class="activeNav" href="#contact">Contact</a>
@@ -84,6 +85,7 @@
         </span>
       </span>
     </div>
+    <!-- Intro and profile image start from here -->
     <div class="homeWrap" id="home">
       <span class="introWrap">
         Hi There!<span class="wave" role="img" aria-labelledby="wave">👋🏻</span>,<br>
@@ -96,69 +98,242 @@
         <img class="imageWrap" src="./assets/image/profileImage.jpg" alt="Profile Image">
       </span>
     </div>
-    <div class="techStackTitleWrap" id="techStack">
-      <div class="title">
-        My Tech Stack
-      </div>
-      <div class="description">
-        Technologies I've been working with recently
-      </div>
-    </div>
-    <div class="techStackIcons">
-      <div class="iconWrap">
-        <img src="./assets/image/html.svg" alt="Html Icon">
-      </div>
-      <div class="iconWrap">
-        <img src="./assets/image/css.svg" alt="Css Icon">
-      </div>
-      <div class="iconWrap">
-        <img src="./assets/image/js.svg" alt="JavaScript Icon">
-      </div>
-      <div class="iconWrap">
-        <img src="./assets/image/bootstrap.svg" alt="BootStrap Icon">
-      </div>
-      <div class="iconWrap">
-        <img src="./assets/image/git.svg" alt="Git Icon">
-      </div>
-      <div class="iconWrap">
-        <img src="./assets/image/github.svg" alt="Github Icon">
-      </div>
-      <div class="iconWrap">
-        <img src="./assets/image/vsCode.svg" alt="VsCode Icon">
-      </div>
-      <div class="iconWrap">
-        <img src="./assets/image/react.svg" alt="React Icon">
-      </div>
+    <!-- Intro and profile image end here -->
 
-    </div>
-    <div class="projectCardTitleWrap" id="projectCard">
-      <div class="title">
-        Projects
-      </div>
-      <div class="description">
-        Things I've built so far
-      </div>
-    </div>
-    <div class="projectCardsWrap">
-      <div class="colWrap">
-        <div class="cardBorder">
-          <div class="cardImage">
-            <img src="./assets/image/html.jpg" alt="Html Card Image">
-          </div>
-          <div class="cardContent">
-            <div class="cardHeader">HTML Practice</div>
-            <div class="cardDescription">Description:- This is the HTML practice html page with all the html tags, html
-              table ... etc.</div>
-            <div class="techUsed"></div>
-          </div>
-          <div class="cardFooter">
-          </div>
+    <!-- Technologies title and icons start from here -->
+    <div class="techStackWrap" id="techStack">
+      <div class="techStackTitleWrap">
+        <div class="title">
+          My Tech Stack
+        </div>
+        <div class="description">
+          Technologies I've been working with recently
         </div>
       </div>
+      <div class="techStackIcons">
+        <div class="iconWrap">
+          <img src="./assets/image/html.svg" alt="Html Icon">
+        </div>
+        <div class="iconWrap">
+          <img src="./assets/image/css.svg" alt="Css Icon">
+        </div>
+        <div class="iconWrap">
+          <img src="./assets/image/js.svg" alt="JavaScript Icon">
+        </div>
+        <div class="iconWrap">
+          <img src="./assets/image/bootstrap.svg" alt="BootStrap Icon">
+        </div>
+        <div class="iconWrap">
+          <img src="./assets/image/git.svg" alt="Git Icon">
+        </div>
+        <div class="iconWrap">
+          <img src="./assets/image/github.svg" alt="Github Icon">
+        </div>
+        <div class="iconWrap">
+          <img src="./assets/image/vsCode.svg" alt="VsCode Icon">
+        </div>
+        <div class="iconWrap">
+          <img src="./assets/image/react.svg" alt="React Icon">
+        </div>
 
+      </div>
     </div>
-    <div class="footerWrap"></div>
-    <div class="footerNavWrap"></div>
+    <!-- Technologies title and icons end here -->
+
+    <!-- Project cards start from here -->
+    <div class="projectWrap" id="projectCard">
+      <div class="projectCardTitleWrap">
+        <div class="title">
+          Projects
+        </div>
+        <div class="description">
+          Things I've built so far
+        </div>
+      </div>
+      <div class="projectCardsWrap">
+        <div class="colWrap">
+          <div class="cardBorder">
+            <div class="cardImage">
+              <img src="./assets/image/html.jpg" alt="Html Card Image">
+            </div>
+            <div class="cardContent">
+              <div class="cardHeader">HTML Practice</div>
+              <div class="cardDescription">Description:- HTML practice page with all the html tags, html
+                table ... etc.
+              </div>
+              <div class="techUsed">Tech Stack:- html, css, javaScript</div>
+            </div>
+            <div class="cardFooter">
+              <a href="https://testfirebase-5f5a7.web.app/htmlPractice.html" target="_blank">
+                Live Preview
+              </a>
+              <a href="https://github.com/D-185/htmlPractice/blob/main/public/htmlPractice.html" target="_blank">
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="colWrap">
+          <div class="cardBorder">
+            <div class="cardImage">
+              <img src="./assets/image/css.png" alt="Html Card Image">
+            </div>
+            <div class="cardContent">
+              <div class="cardHeader">CSS Practice</div>
+              <div class="cardDescription">Description:- HTML practice page with all the html tags, html
+                table ... etc.
+              </div>
+              <div class="techUsed">Tech Stack:- html, css, javaScript</div>
+            </div>
+            <div class="cardFooter">
+              <a href="https://testfirebase-5f5a7.web.app/cssProperty.html" target="_blank">
+                Live Preview
+              </a>
+              <a href="https://github.com/D-185/htmlPractice/blob/main/public/cssProperty.html" target="_blank">
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="colWrap">
+          <div class="cardBorder">
+            <div class="cardImage">
+              <img src="./assets/image/javaScript.jpg" alt="Html Card Image">
+            </div>
+            <div class="cardContent">
+              <div class="cardHeader">JavaScript Practice</div>
+              <div class="cardDescription">Description:- HTML practice page with all the html tags, html
+                table ... etc.
+              </div>
+              <div class="techUsed">Tech Stack:- html, css, javaScript</div>
+            </div>
+            <div class="cardFooter">
+              <a href=#>
+                Live Preview
+              </a>
+              <a href=#>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="colWrap">
+          <div class="cardBorder">
+            <div class="cardImage">
+              <img src="./assets/image/reactImage.jpeg" alt="Html Card Image">
+            </div>
+            <div class="cardContent">
+              <div class="cardHeader">React Practice</div>
+              <div class="cardDescription">Description:-
+              </div>
+              <div class="techUsed">Tech Stack:- html, css, reactJs</div>
+            </div>
+            <div class="cardFooter">
+              <a href=#>
+                Live Preview
+              </a>
+              <a href=#>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="colWrap">
+          <div class="cardBorder">
+            <div class="cardImage">
+              <img src="./assets/image/workInProgrss.png" alt="Html Card Image">
+            </div>
+            <div class="cardContent">
+              <div class="cardHeader">Title:-</div>
+              <div class="cardDescription">Description:-
+              </div>
+              <div class="techUsed">Tech Stack:-</div>
+            </div>
+            <div class="cardFooter">
+              <a href=#>
+                Live Preview
+              </a>
+              <a href=#>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="colWrap">
+          <div class="cardBorder">
+            <div class="cardImage">
+              <img src="./assets/image/workInProgrss.png" alt="Html Card Image">
+            </div>
+            <div class="cardContent">
+              <div class="cardHeader">Title:-</div>
+              <div class="cardDescription">Description:-
+              </div>
+              <div class="techUsed">Tech Stack:- </div>
+            </div>
+            <div class="cardFooter">
+              <a href=#>
+                Live Preview
+              </a>
+              <a href=#>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Project cards end here -->
+
+    <!-- Footer Starts from here -->
+    <div class="footer" id="contact">
+      <div class="contactWrap">
+        <span class="contactNumber">+91 7737957798</span>
+        <span class="conatctEmail">nagendra.chauhan2001@gmail.com</span>
+        <span class="socialLinkWrap">
+          <span class="socialActive">
+            <a class="github" area-label="Github" href="https://github.com/D-185" target="_blank"><i
+                class="bi bi-github"></i></a>
+          </span>
+          <span class="socialActive">
+            <a class="twitter" area-label="Twitter" href="https://twitter.com/nagendraReact" target="_blank"><i
+                class="bi bi-twitter"></i></a>
+          </span>
+          <span class="socialActive">
+            <a class="linkedin" area-label="LinkedIn"
+              href="https://www.linkedin.com/in/nagendra-singh-chauhan-0328091aa/" target="_blank"><i
+                class="bi bi-linkedin"></i></a>
+          </span>
+        </span>
+      </div>
+      <div class="bottomNavBarWrap">
+        <span class="navBar">
+          <span class="rowWrap">
+            <a class="activeNav" href="#home">Home</a>
+          </span>
+          <span class="rowWrap">
+            <a class="activeNav" href="#about">About</a>
+          </span>
+          <span class="rowWrap">
+            <a class="activeNav" href="#techStack">TechStack</a>
+          </span>
+          <span class="rowWrap">
+            <a class="activeNav" href="#projectCard">Projects</a>
+          </span>
+          <span class="rowWrap">
+            <a class="activeNav" href="#contact">Contact</a>
+          </span>
+        </span>
+        <span class="creditWrap">
+          Designed and built by <span class="nameWrap">Nagendra Singh Chauhan</span>.
+        </span>
+      </div>
+    </div>
   </div>
 
   <p id="load">Firebase SDK Loading&hellip;</p>
