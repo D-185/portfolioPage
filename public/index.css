@@ -1,6 +1,74 @@
-#load{
+#load {
     display: none;
 }
+
+.preloaderWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background: #011015;
+  }
+  
+  .preloaderWrap  .ring{
+    width: 200px;
+    height: 200px;
+    border: 0px solid #011015;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .preloaderWrap  .ring:nth-child(1){
+    border-bottom-width: 8px;
+    border-color: rgb(255, 0, 255);
+    animation: rotate1 1s linear infinite;
+  }
+  .preloaderWrap  .ring:nth-child(2){
+    border-bottom-width: 8px;
+    border-color: rgb(0, 247, 255);
+    animation: rotate2 2s linear infinite;
+  }
+  .preloaderWrap  .ring:nth-child(3){
+    border-bottom-width: 8px;
+    border-color: rgb(0, 255, 13);
+    animation: rotate3 3s linear infinite;
+  }
+  
+  
+  .loading{
+    color: white;
+  }
+  
+  @keyframes rotate1{
+    0%{
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100%{
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate2{
+    0%{
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100%{
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate3{
+    0%{
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100%{
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }
+  
 
 * {
     margin: 0;
@@ -9,15 +77,16 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: all 0.2s linear;
 }
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background: #f7f7f7;
     font-family: "Poppins", sans-serif;
 }
@@ -35,7 +104,7 @@ body{
     left: 0;
     right: 0;
     top: 0rem;
-    z-index: 1000;
+    z-index: 100;
     height: 6.5rem;
     background-color: #fff;
     padding: 1.7rem 10%;
@@ -51,6 +120,11 @@ body{
     font-weight: 800;
     font-family: Poppins;
 }
+.portfolioPageWrap .headerWrap .logoWrap:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+}
 
 .portfolioPageWrap .headerWrap .logoWrap .logo {
     font-size: 1.9rem;
@@ -65,7 +139,8 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.portfolioPageWrap .headerWrap .navBarWrap .hamburger{
+
+.portfolioPageWrap .headerWrap .navBarWrap .hamburger {
     display: none;
 }
 
@@ -78,15 +153,18 @@ body{
     font-weight: 500;
     color: #666666;
 }
+
 .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap {
     margin-right: 2.5rem;
 }
-.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .hamburger{
+
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .hamburger {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
 }
-.portfolioPageWrap .headerWrap .navBarWrap .navBar  .rowWrap a {
+
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap a {
     text-decoration: none;
     color: #666666;
     font-size: 1.57rem;
@@ -95,11 +173,14 @@ body{
     letter-spacing: 0.04rem;
     transition: 0.2s;
 }
-.portfolioPageWrap .headerWrap .navBarWrap .navBar  .rowWrap a:hover{
-    color: #011aff;
-    border-bottom: 0.2rem solid #011aff;
+
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap a:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
 }
-.portfolioPageWrap .headerWrap .navBarWrap .navBar  .rowWrap a:active{
+
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap a:active {
     padding: 0.5rem 0;
 }
 
@@ -109,7 +190,8 @@ body{
     align-items: center;
     color: #666;
 }
-.portfolioPageWrap .headerWrap .navBarWrap .socialLinkWrap .socialActive{
+
+.portfolioPageWrap .headerWrap .navBarWrap .socialLinkWrap .socialActive {
     margin-right: 8px;
 }
 
@@ -122,9 +204,16 @@ body{
 }
 
 .portfolioPageWrap .headerWrap .socialLinkWrap a:active,
-.portfolioPageWrap .headerWrap .socialLinkWrap a:focus,
-.portfolioPageWrap .headerWrap .socialLinkWrap a:hover {
+.portfolioPageWrap .headerWrap .socialLinkWrap a:focus {
     color: #0685da;
+}
+
+.portfolioPageWrap .headerWrap .socialLinkWrap a:hover {
+
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+    border-radius: 50%;
 }
 
 .portfolioPageWrap .homeWrap {
@@ -134,8 +223,8 @@ body{
     align-items: center;
     min-height: 80vh;
     padding: 2rem 9%
-
 }
+
 .portfolioPageWrap .homeWrap .introWrap {
     font-family: var(--font-poppins);
     font-size: 5rem;
@@ -149,7 +238,8 @@ body{
     transform-origin: 70% 70%;
     display: inline-block;
 }
-.portfolioPageWrap .homeWrap .introWrap .typeWriterWrap{
+
+.portfolioPageWrap .homeWrap .introWrap .typeWriterWrap {
     font-size: 2.5rem;
     font-weight: 600;
     padding: 1rem 0;
@@ -197,13 +287,14 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.portfolioPageWrap .homeWrap .profileImageWrap{
-}
-.portfolioPageWrap .homeWrap .profileImageWrap .imageWrap{
+.portfolioPageWrap .homeWrap .profileImageWrap {}
+
+.portfolioPageWrap .homeWrap .profileImageWrap .imageWrap {
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 2px 21px rgba(0, 0, 0, 0.3);
 }
+
 .portfolioPageWrap .techStackWrap {
     min-height: 50rem;
     padding: 15rem 9%;
@@ -215,6 +306,7 @@ body{
     font-style: normal;
     min-height: 15rem;
 }
+
 .portfolioPageWrap .techStackTitleWrap .title {
     color: #42446E;
     font-size: 3rem;
@@ -222,13 +314,13 @@ body{
     margin-bottom: 0.5rem;
 }
 
-.portfolioPageWrap .techStackTitleWrap .description{
+.portfolioPageWrap .techStackTitleWrap .description {
     color: #666;
     font-size: 2rem;
     font-weight: 400;
 }
 
-.portfolioPageWrap .techStackIcons{
+.portfolioPageWrap .techStackIcons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -236,20 +328,24 @@ body{
     padding: 2rem 0;
 
 }
-.portfolioPageWrap .techStackIcons .iconWrap{
+
+.portfolioPageWrap .techStackIcons .iconWrap {
     flex: 0 1 calc(26.3% - 2rem);
     text-align: center;
 }
+
 .portfolioPageWrap .projectWrap {
     min-height: 15rem;
     padding: 9rem 9%;
 }
+
 .portfolioPageWrap .projectCardTitleWrap {
     text-align: center;
     font-family: Poppins;
     font-style: normal;
 
 }
+
 .portfolioPageWrap .projectCardTitleWrap .title {
     color: #42446E;
     font-size: 3rem;
@@ -257,77 +353,125 @@ body{
     margin-bottom: 0.5rem;
 }
 
-.portfolioPageWrap .projectCardTitleWrap .description{
+.portfolioPageWrap .projectCardTitleWrap .description {
     color: #666;
     font-size: 2rem;
     font-weight: 400;
 }
 
-.portfolioPageWrap .projectCardsWrap{
+.portfolioPageWrap .projectCardsWrap {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem 0;
 
 }
-.portfolioPageWrap .projectCardsWrap .colWrap{
+
+.portfolioPageWrap .projectCardsWrap .colWrap {
     flex: 1 1 calc(33.3% - 1rem);
     text-align: center;
+    padding: 2rem;
 }
 
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder{
-    border-radius: 10px;
-    box-shadow: 2px 2px 100px rgba(0,0,0,0.2);
-    margin: 22px;
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation{
+    position: relative;
+    background: linear-gradient(50deg, #2a5a3b, #1e4886);
     overflow: hidden;
+    border-radius: 1em;
+    z-index: 1;
 }
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage{
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation::before{
+    content: '';
+    position: absolute;
+    width: 468px;
+    height: 35px;
+    top: 0;
+    right: 35px;
+    transition: 1.9s;
+    background: linear-gradient(50deg, #00ff59, #02b3ff);
+    transform: rotate(-45deg) translate(0, -100px);
+
+}
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation:hover::before{
+    animation: cardEffect 1.9s infinite;
+    z-index: 1;
+}
+
+@keyframes cardEffect {
+    100% {
+        transform: rotate(-45deg) translate(0, 450px);
+    }
+}
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+    margin: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage {
     text-align: left;
     width: 100%;
-}
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage img{
-    height: 16vw;
-    width: 100%;
+    overflow: hidden;
 }
 
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent{
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage img {
+    height: 16vw;
+    width: 100%;
+    transition: all 0.5s;
+}
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage img:hover {
+    transform: scale(1.19);
+}
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent {
     padding: 1rem;
     text-align: left;
     font-family: "Poppins", sans-serif;
 }
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent .cardHeader{
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent .cardHeader {
     font-size: 1.37rem;
     font-weight: 700;
 }
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent .cardDescription{
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent .cardDescription {
     height: 6rem;
     padding: 10px 0;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
 
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardFooter{
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardFooter {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
 }
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardFooter a{
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardFooter a {
     text-decoration: none;
     color: #4183c4;
 }
 
-.portfolioPageWrap .footer{
+.portfolioPageWrap .footer {
     padding: 9rem 9%;
 }
-.portfolioPageWrap .footer .contactWrap{
+
+.portfolioPageWrap .footer .contactWrap {
     border-bottom: 2px solid #666666;
     display: flex;
     justify-content: flex-end;
     padding: 2rem 0;
     align-items: center;
 }
-.portfolioPageWrap .footer .contactWrap .conatctEmail{
+
+.portfolioPageWrap .footer .contactWrap .conatctEmail {
     padding-left: 2.5rem;
 }
-.portfolioPageWrap .footer .contactWrap .socialLinkWrap{
+
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap {
     padding-left: 2.5rem;
 }
 
@@ -337,7 +481,8 @@ body{
     align-items: center;
     color: #666;
 }
-.portfolioPageWrap .footer .contactWrap .socialLinkWrap .socialActive{
+
+.portfolioPageWrap .footer .contactWrap .socialLinkWrap .socialActive {
     margin-right: 8px;
 }
 
@@ -354,7 +499,8 @@ body{
 .portfolioPageWrap .footer .contactWrap .socialLinkWrap a:hover {
     color: #0685da;
 }
-.portfolioPageWrap .footer .bottomNavBarWrap{
+
+.portfolioPageWrap .footer .bottomNavBarWrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -366,15 +512,18 @@ body{
     display: flex;
     font-family: DM Sans;
 }
+
 .portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap {
     margin-right: 2.5rem;
 }
-.portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap .hamburger{
+
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap .hamburger {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
 }
-.portfolioPageWrap .footer .bottomNavBarWrap .navBar  .rowWrap a {
+
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap a {
     text-decoration: none;
     color: #666666;
     font-weight: 600;
@@ -382,14 +531,17 @@ body{
     letter-spacing: 0.04rem;
     transition: 0.2s;
 }
-.portfolioPageWrap .footer .bottomNavBarWrap .navBar  .rowWrap a:hover{
+
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap a:hover {
     color: #011aff;
     border-bottom: 0.2rem solid #011aff;
 }
-.portfolioPageWrap .footer .bottomNavBarWrap .navBar  .rowWrap a:active{
+
+.portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap a:active {
     padding: 0.5rem 0;
 }
-.portfolioPageWrap .footer .bottomNavBarWrap .creditWrap .nameWrap{
+
+.portfolioPageWrap .footer .bottomNavBarWrap .creditWrap .nameWrap {
     background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -398,29 +550,33 @@ body{
 
 
 /* Media Query section */
-@media (max-width: 1440px){
+@media (max-width: 1440px) {}
 
-}
-@media (max-width: 1160px){
-    .portfolioPageWrap .homeWrap .introWrap{
+@media (max-width: 1160px) {
+    .portfolioPageWrap .homeWrap .introWrap {
         font-size: 4rem;
     }
 }
-@media (max-width: 780px){
+
+@media (max-width: 780px) {
     .portfolioPageWrap .headerWrap .navBarWrap .socialLinkWrap {
         display: none;
     }
-    .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap{
+
+    .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap {
         width: 20rem;
     }
+
     .portfolioPageWrap .headerWrap .navBarWrap .navBar {
         display: none;
-        
+
     }
+
     .portfolioPageWrap .headerWrap .navBarWrap .hamburger {
         display: block;
         cursor: pointer;
     }
+
     .portfolioPageWrap .headerWrap .navBarWrap .bar {
         width: 25px;
         height: 3px;
@@ -433,24 +589,26 @@ body{
         font-size: 3rem;
         font-weight: 600;
     }
-    
-    
-    .portfolioPageWrap .homeWrap .introWrap .typeWriterWrap{
+
+
+    .portfolioPageWrap .homeWrap .introWrap .typeWriterWrap {
         font-size: 1.5rem;
         font-weight: 400;
     }
 }
-@media (max-width: 576px){
-    .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap{
+
+@media (max-width: 576px) {
+    .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap {
         width: 12rem;
     }
-    .portfolioPageWrap .techStackIcons .iconWrap img{
+
+    .portfolioPageWrap .techStackIcons .iconWrap img {
         width: 70%;
     }
-    .portfolioPageWrap .homeWrap .introWrap{
+
+    .portfolioPageWrap .homeWrap .introWrap {
         font-size: 2rem;
     }
 }
-@media (max-width: 375px){
 
-}
+@media (max-width: 375px) {}
