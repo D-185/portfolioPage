@@ -37,7 +37,7 @@
 </head>
 
 <body>
-
+  <!-- preloader starts from here -->
   <div id="preloader" class="preloaderWrap">
     <div class=ring>
     </div>
@@ -48,6 +48,8 @@
     <span class="loading">Loading...</span>
   </div>
   <div class="portfolioPageWrap">
+    <!-- preloader ends here -->
+
     <!-- Navigation bar start from here -->
     <div class="headerWrap">
       <div class="logoWrap">
@@ -73,7 +75,37 @@
             <a class="activeNav" href="#projectCard">Projects</a>
           </span>
           <span class="rowWrap">
-            <a class="activeNav" href="#contact">Contact</a>
+            <span class="activeNav" id="openPopupButton">Contact</span>
+            <!-- experiment starts -->
+            <div id="popupContainer" class="popup">
+              <div class="popup-content">
+                <span class="close" id="closePopupButton">&times;</span>
+                <div class="container">
+                  <h1>Contact Us</h1>
+                  <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input class="form-control" type="text" id="name" name="name" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input class="form-control" type="tel" id="phone" name="phone" required>
+
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="email" id="email" name="email" required>
+
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+
+                    <div class="btnContainer">
+                      <button class="btn btn-primary" type="submit">Submit</button>
+                      <button class="btn btn-primary" type="reset">Reset</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- experiment ends -->
+
           </span>
         </span>
         <div class="hamburger" onclick="toggleNavBar()">
@@ -395,7 +427,7 @@
 
   <script>
     let loader = document.getElementById("preloader");
-    window.addEventListener("load", function(){
+    window.addEventListener("load", function () {
       loader.style.display = "none";
     })
   </script>

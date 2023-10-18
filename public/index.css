@@ -11,64 +11,69 @@
     position: fixed;
     z-index: 1000;
     background: #011015;
-  }
-  
-  .preloaderWrap  .ring{
+}
+
+.preloaderWrap .ring {
     width: 200px;
     height: 200px;
     border: 0px solid #011015;
     border-radius: 50%;
     position: absolute;
-  }
-  
-  .preloaderWrap  .ring:nth-child(1){
+}
+
+.preloaderWrap .ring:nth-child(1) {
     border-bottom-width: 8px;
     border-color: rgb(255, 0, 255);
     animation: rotate1 1s linear infinite;
-  }
-  .preloaderWrap  .ring:nth-child(2){
+}
+
+.preloaderWrap .ring:nth-child(2) {
     border-bottom-width: 8px;
     border-color: rgb(0, 247, 255);
     animation: rotate2 2s linear infinite;
-  }
-  .preloaderWrap  .ring:nth-child(3){
+}
+
+.preloaderWrap .ring:nth-child(3) {
     border-bottom-width: 8px;
     border-color: rgb(0, 255, 13);
     animation: rotate3 3s linear infinite;
-  }
-  
-  
-  .loading{
+}
+
+
+.loading {
     color: white;
-  }
-  
-  @keyframes rotate1{
-    0%{
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
     }
-    100%{
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
     }
-  }
-  
-  @keyframes rotate2{
-    0%{
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
     }
-    100%{
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
     }
-  }
-  
-  @keyframes rotate3{
-    0%{
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
     }
-    100%{
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
     }
-  }
-  
+}
+
 
 * {
     margin: 0;
@@ -120,6 +125,7 @@ body {
     font-weight: 800;
     font-family: Poppins;
 }
+
 .portfolioPageWrap .headerWrap .logoWrap:hover {
     box-shadow: 0 0 5px cyan,
         0 0 25px cyan, 0 0 50px cyan,
@@ -164,7 +170,7 @@ body {
     padding: 10px;
 }
 
-.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap a {
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .activeNav {
     text-decoration: none;
     color: #666666;
     font-size: 1.57rem;
@@ -172,17 +178,88 @@ body {
     text-decoration: none;
     letter-spacing: 0.04rem;
     transition: 0.2s;
+    cursor: pointer;
 }
 
-.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap a:hover {
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .activeNav:hover {
     box-shadow: 0 0 5px cyan,
         0 0 25px cyan, 0 0 50px cyan,
         0 0 100px cyan, 0 0 200px cyan;
 }
 
-.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap a:active {
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .activeNav:active {
     padding: 0.5rem 0;
 }
+
+/* experiment starts */
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .close:hover {
+    color: black;
+  }
+
+  .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container label,
+  input,
+  textarea {
+    display: block;
+  }
+  .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container
+  input{
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container textarea {
+    resize: vertical;
+    border: 1px solid black;
+    width: 100%;
+
+  }
+  
+  .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container .btnContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+
+
+/* experiment ends */
 
 .portfolioPageWrap .headerWrap .navBarWrap .socialLinkWrap {
     display: flex;
@@ -372,14 +449,15 @@ body {
     padding: 2rem;
 }
 
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation{
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation {
     position: relative;
     background: linear-gradient(50deg, #2a5a3b, #1e4886);
     overflow: hidden;
     border-radius: 1em;
     z-index: 1;
 }
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation::before{
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation::before {
     content: '';
     position: absolute;
     width: 468px;
@@ -391,7 +469,8 @@ body {
     transform: rotate(-45deg) translate(0, -100px);
 
 }
-.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation:hover::before{
+
+.portfolioPageWrap .projectCardsWrap .colWrap .cardBorderAnimation:hover::before {
     animation: cardEffect 1.9s infinite;
     z-index: 1;
 }
@@ -423,6 +502,7 @@ body {
     width: 100%;
     transition: all 0.5s;
 }
+
 .portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardImage img:hover {
     transform: scale(1.19);
 }
