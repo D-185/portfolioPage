@@ -2,6 +2,7 @@
     display: none;
 }
 
+/* preloader css start */
 .preloaderWrap {
     display: flex;
     justify-content: center;
@@ -74,6 +75,7 @@
     }
 }
 
+/* preloader css end */
 
 * {
     margin: 0;
@@ -100,6 +102,7 @@ body {
 .portfolioPageWrap {
     margin: auto;
 }
+/* profile head part start */
 
 .portfolioPageWrap .headerWrap {
     display: flex;
@@ -225,7 +228,7 @@ body {
   }
 
   .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
   }
@@ -235,16 +238,14 @@ body {
   textarea {
     display: block;
   }
-  .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container
+  /* .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container
   input{
     border: 1px solid black;
     width: 100%;
     margin-bottom: 10px;
-  }
+  } */
 
   .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .container textarea {
-    resize: vertical;
-    border: 1px solid black;
     width: 100%;
 
   }
@@ -292,6 +293,10 @@ body {
         0 0 100px cyan, 0 0 200px cyan;
     border-radius: 50%;
 }
+
+/* profile head part end */
+
+/* intro part start */
 
 .portfolioPageWrap .homeWrap {
     position: relative;
@@ -364,13 +369,16 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.portfolioPageWrap .homeWrap .profileImageWrap {}
 
 .portfolioPageWrap .homeWrap .profileImageWrap .imageWrap {
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 2px 21px rgba(0, 0, 0, 0.3);
 }
+
+/* intro part end */
+
+/* techStact part start */
 
 .portfolioPageWrap .techStackWrap {
     min-height: 50rem;
@@ -411,6 +419,9 @@ body {
     text-align: center;
 }
 
+/* techStact part end */
+
+/* Project cards start */
 .portfolioPageWrap .projectWrap {
     min-height: 15rem;
     padding: 9rem 9%;
@@ -535,6 +546,9 @@ body {
     color: #4183c4;
 }
 
+/* Project cards end */
+
+/* footer start */
 .portfolioPageWrap .footer {
     padding: 9rem 9%;
 }
@@ -627,6 +641,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* footer end  */
+
 
 
 /* Media Query section */

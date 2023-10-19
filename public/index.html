@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
   <!-- include only the Firebase features as you need -->
@@ -75,37 +75,62 @@
             <a class="activeNav" href="#projectCard">Projects</a>
           </span>
           <span class="rowWrap">
-            <span class="activeNav" id="openPopupButton">Contact</span>
-            <!-- experiment starts -->
+            <span class="activeNav" id="openPopupButton">
+              Contact
+            </span>
+            <!-- popup for small Screen starts -->
             <div id="popupContainer" class="popup">
               <div class="popup-content">
                 <span class="close" id="closePopupButton">&times;</span>
                 <div class="container">
-                  <h1>Contact Us</h1>
+
+                  <!-- form start -->
                   <form id="contactForm">
-                    <label for="name">Name:</label>
-                    <input class="form-control" type="text" id="name" name="name" required>
+                    <fieldSet>
+                      <legend>Contact Form</legend>
 
-                    <label for="phone">Phone Number:</label>
-                    <input class="form-control" type="tel" id="phone" name="phone" required>
+                      <!-- name -->
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+                        </div>
+                        <input type="text" name="name" class="form-control" placeholder="Name" aria-label="Username"
+                          aria-describedby="basic-addon1" required>
+                      </div>
 
-                    <label for="email">Email:</label>
-                    <input class="form-control" type="email" id="email" name="email" required>
+                      <!-- phone number -->
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
+                        </div>
+                        <input type="number" name="phoneNumber" class="form-control" placeholder="Phone Number" aria-label="phoneNumber"
+                          aria-describedby="basic-addon1" required>
+                      </div>
 
-                    <label for="comment">Comment:</label>
-                    <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
-
-                    <div class="btnContainer">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                      <button class="btn btn-primary" type="reset">Reset</button>
-                    </div>
+                      <!-- email -->
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope-fill"></i></span>
+                        </div>
+                        <input type="email" name="email" class="form-control" placeholder="Email" aria-label="email"
+                          aria-describedby="basic-addon1" required>
+                      </div>
+                      <div class="input-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+  
+                      </div>                      
+                      
+                      <div class="btnContainer">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" type="reset">Reset</button>
+                      </div>
+                    </fieldSet>
                   </form>
                 </div>
               </div>
             </div>
-
-            <!-- experiment ends -->
-
+            <!-- popup for small Screen ends -->
           </span>
         </span>
         <div class="hamburger" onclick="toggleNavBar()">
@@ -130,7 +155,8 @@
         </span>
       </span>
     </div>
-    <!-- Intro and profile image start from here -->
+
+    <!-- Intro and profile image start -->
     <div class="homeWrap" id="home">
       <span class="introWrap">
         Hi There!<span class="wave" role="img" aria-labelledby="wave">👋🏻</span>,<br>
@@ -143,7 +169,7 @@
         <img class="imageWrap" src="./assets/image/profileImage.jpg" alt="Profile Image">
       </span>
     </div>
-    <!-- Intro and profile image end here -->
+    <!-- Intro and profile image end -->
 
     <!-- Technologies title and icons start from here -->
     <div class="techStackWrap" id="techStack">
@@ -155,37 +181,12 @@
           Technologies I've been working with recently
         </div>
       </div>
-      <div class="techStackIcons">
-        <div class="iconWrap">
-          <img src="./assets/image/html.svg" alt="Html Icon">
-        </div>
-        <div class="iconWrap">
-          <img src="./assets/image/css.svg" alt="Css Icon">
-        </div>
-        <div class="iconWrap">
-          <img src="./assets/image/js.svg" alt="JavaScript Icon">
-        </div>
-        <div class="iconWrap">
-          <img src="./assets/image/bootstrap.svg" alt="BootStrap Icon">
-        </div>
-        <div class="iconWrap">
-          <img src="./assets/image/git.svg" alt="Git Icon">
-        </div>
-        <div class="iconWrap">
-          <img src="./assets/image/github.svg" alt="Github Icon">
-        </div>
-        <div class="iconWrap">
-          <img src="./assets/image/vsCode.svg" alt="VsCode Icon">
-        </div>
-        <div class="iconWrap">
-          <img src="./assets/image/react.svg" alt="React Icon">
-        </div>
-
+      <div class="techStackIcons" id="techStachId">
       </div>
     </div>
-    <!-- Technologies title and icons end here -->
+    <!-- Technologies title and icons -->
 
-    <!-- Project cards start from here -->
+    <!-- Project cards start -->
     <div class="projectWrap" id="projectCard">
       <div class="projectCardTitleWrap">
         <div class="title">
@@ -195,160 +196,10 @@
           Things I've built so far
         </div>
       </div>
-      <div class="projectCardsWrap">
-        <div class="colWrap">
-          <div class="cardBorderAnimation">
-            <div class="cardBorder">
-              <div class="cardImage">
-                <img src="./assets/image/html.jpg" alt="Html Card Image">
-              </div>
-              <div class="cardContent">
-                <div class="cardHeader">HTML Practice</div>
-                <div class="cardDescription">Description:- HTML practice page with all the html tags, html
-                  table ... etc.
-                </div>
-                <div class="techUsed">Tech Stack:- html, css, javaScript</div>
-              </div>
-              <div class="cardFooter">
-                <a href="https://testfirebase-5f5a7.web.app/htmlPractice.html" target="_blank">
-                  Live Preview
-                </a>
-                <a href="https://github.com/D-185/htmlPractice/blob/main/public/htmlPractice.html" target="_blank">
-                  View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="colWrap">
-          <div class="cardBorderAnimation">
-            <div class="cardBorder">
-              <div class="cardImage">
-                <img src="./assets/image/css.png" alt="Html Card Image">
-              </div>
-              <div class="cardContent">
-                <div class="cardHeader">CSS Practice</div>
-                <div class="cardDescription">Description:- HTML practice page with all the html tags, html
-                  table ... etc.
-                </div>
-                <div class="techUsed">Tech Stack:- html, css, javaScript</div>
-              </div>
-              <div class="cardFooter">
-                <a href="https://testfirebase-5f5a7.web.app/cssProperty.html" target="_blank">
-                  Live Preview
-                </a>
-                <a href="https://github.com/D-185/htmlPractice/blob/main/public/cssProperty.html" target="_blank">
-                  View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="colWrap">
-          <div class="cardBorderAnimation">
-            <div class="cardBorder">
-              <div class="cardImage">
-                <img src="./assets/image/javaScript.jpg" alt="Html Card Image">
-              </div>
-              <div class="cardContent">
-                <div class="cardHeader">JavaScript Practice</div>
-                <div class="cardDescription">Description:- HTML practice page with all the html tags, html
-                  table ... etc.
-                </div>
-                <div class="techUsed">Tech Stack:- html, css, javaScript</div>
-              </div>
-              <div class="cardFooter">
-                <a href=#>
-                  Live Preview
-                </a>
-                <a href=#>
-                  View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="colWrap">
-          <div class="cardBorderAnimation">
-
-            <div class="cardBorder">
-              <div class="cardImage">
-                <img src="./assets/image/reactImage.jpeg" alt="Html Card Image">
-              </div>
-              <div class="cardContent">
-                <div class="cardHeader">React Practice</div>
-                <div class="cardDescription">Description:-
-                </div>
-                <div class="techUsed">Tech Stack:- html, css, reactJs</div>
-              </div>
-              <div class="cardFooter">
-                <a href=#>
-                  Live Preview
-                </a>
-                <a href=#>
-                  View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="colWrap">
-          <div class="cardBorderAnimation">
-
-            <div class="cardBorder">
-              <div class="cardImage">
-                <img src="./assets/image/workInProgrss.png" alt="Html Card Image">
-              </div>
-              <div class="cardContent">
-                <div class="cardHeader">Title:-</div>
-                <div class="cardDescription">Description:-
-                </div>
-                <div class="techUsed">Tech Stack:-</div>
-              </div>
-              <div class="cardFooter">
-                <a href=#>
-                  Live Preview
-                </a>
-                <a href=#>
-                  View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="colWrap">
-          <div class="cardBorderAnimation">
-
-            <div class="cardBorder">
-              <div class="cardImage">
-                <img src="./assets/image/workInProgrss.png" alt="Html Card Image">
-              </div>
-              <div class="cardContent">
-                <div class="cardHeader">Title:-</div>
-                <div class="cardDescription">Description:-
-                </div>
-                <div class="techUsed">Tech Stack:- </div>
-              </div>
-              <div class="cardFooter">
-                <a href=#>
-                  Live Preview
-                </a>
-                <a href=#>
-                  View Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div class="projectCardsWrap" id="projectCardsWrapId">
       </div>
     </div>
-    <!-- Project cards end here -->
+    <!-- Project cards end -->
 
     <!-- Footer Starts from here -->
     <div class="footer" id="contact">
