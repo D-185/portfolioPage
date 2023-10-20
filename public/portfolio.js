@@ -184,7 +184,7 @@ projectData();
 //projectCards as an array end
 
 //techStact icons start
-function techStactIcon(){
+function techStactIcon() {
     const techStactArray = [
         {
             id: 1,
@@ -231,7 +231,7 @@ function techStactIcon(){
     let techStactTemp = "";
     techStactArray.map((item, index) => {
         techStactTemp += `<div class="iconWrap">
-        <img src=${item.imgSrc} alt=${item.imgAlt}>
+        <img class="${item.id === 6 ? "gitIconClass" : ""}" src=${item.imgSrc} alt=${item.imgAlt}>
       </div>`
     })
     let techStactIconTemp = document.getElementById('techStachId')
@@ -239,3 +239,13 @@ function techStactIcon(){
 }
 techStactIcon();
 //techStact icons end
+
+let icon = document.getElementById("moonId");
+icon.onclick = function(){
+    document.body.classList.toggle("darkTheme");
+    if(document.body.classList.contains("darkTheme")){
+        icon.classList = "bi bi-brightness-high";
+    }else {
+        icon.classList = "bi bi-moon-fill";
+    }
+}

@@ -94,12 +94,13 @@ html {
 }
 
 body {
-    background: #f7f7f7;
     font-family: "Poppins", sans-serif;
+    background-color: var(--primary-color) !important;
 }
 
 
 .portfolioPageWrap {
+
     margin: auto;
 }
 /* profile head part start */
@@ -114,7 +115,7 @@ body {
     top: 0rem;
     z-index: 100;
     height: 6.5rem;
-    background-color: #fff;
+    background-color: var(--primary-color);
     padding: 1.7rem 10%;
     /* box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3); */
 }
@@ -160,7 +161,7 @@ body {
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
-    color: #666666;
+    color: var(--ternary-color);
 }
 
 .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap {
@@ -175,7 +176,7 @@ body {
 
 .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .activeNav {
     text-decoration: none;
-    color: #666666;
+    color: var(--ternary-color);
     font-size: 1.57rem;
     font-weight: 600;
     text-decoration: none;
@@ -208,7 +209,7 @@ body {
 }
 
 .portfolioPageWrap .headerWrap .navBarWrap .navBar .rowWrap .popup-content {
-    background-color: #fefefe;
+    background-color: var(--primary-color);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -273,12 +274,16 @@ body {
     margin-right: 8px;
 }
 
-.portfolioPageWrap .headerWrap .socialLinkWrap a {
+.portfolioPageWrap .headerWrap .socialLinkWrap a,button {
     font-size: 2rem;
     display: inline-block;
-    color: #666;
-    background-color: #fff;
+    color: var(--ternary-color);
+    background-color: var(--primary-color);
     text-align: center;
+}
+.portfolioPageWrap .headerWrap .socialLinkWrap #moonId {
+    font-size: 2rem;
+
 }
 
 .portfolioPageWrap .headerWrap .socialLinkWrap a:active,
@@ -311,6 +316,7 @@ body {
     font-family: var(--font-poppins);
     font-size: 5rem;
     font-weight: 800;
+    color: var(--secondary-color);
 }
 
 .portfolioPageWrap .homeWrap .introWrap .wave {
@@ -393,7 +399,7 @@ body {
 }
 
 .portfolioPageWrap .techStackTitleWrap .title {
-    color: #42446E;
+    color: var(--fourth-color);
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -418,6 +424,9 @@ body {
     flex: 0 1 calc(26.3% - 2rem);
     text-align: center;
 }
+.portfolioPageWrap .techStackIcons .iconWrap .gitIconClass{
+    filter: var(--fifth-filter);
+}
 
 /* techStact part end */
 
@@ -435,7 +444,7 @@ body {
 }
 
 .portfolioPageWrap .projectCardTitleWrap .title {
-    color: #42446E;
+    color: var(--fourth-color);
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -498,7 +507,7 @@ body {
     box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
     margin: 6px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--primary-color);
     z-index: 2;
 }
 
@@ -522,6 +531,8 @@ body {
     padding: 1rem;
     text-align: left;
     font-family: "Poppins", sans-serif;
+    color: var(--ternary-color);
+
 }
 
 .portfolioPageWrap .projectCardsWrap .colWrap .cardBorder .cardContent .cardHeader {
@@ -554,11 +565,13 @@ body {
 }
 
 .portfolioPageWrap .footer .contactWrap {
-    border-bottom: 2px solid #666666;
+    border-bottom: 2px solid var(--ternary-color);
     display: flex;
     justify-content: flex-end;
     padding: 2rem 0;
     align-items: center;
+    color: var(--ternary-color);
+
 }
 
 .portfolioPageWrap .footer .contactWrap .conatctEmail {
@@ -573,7 +586,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: #666;
 }
 
 .portfolioPageWrap .footer .contactWrap .socialLinkWrap .socialActive {
@@ -583,8 +595,7 @@ body {
 .portfolioPageWrap .footer .contactWrap .socialLinkWrap a {
     font-size: 1.5rem;
     display: inline-block;
-    color: #666;
-    background-color: #fff;
+    color: var(--ternary-color);
     text-align: center;
 }
 
@@ -619,7 +630,7 @@ body {
 
 .portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap a {
     text-decoration: none;
-    color: #666666;
+    color: var(--ternary-color);
     font-weight: 600;
     text-decoration: none;
     letter-spacing: 0.04rem;
@@ -633,6 +644,9 @@ body {
 
 .portfolioPageWrap .footer .bottomNavBarWrap .navBar .rowWrap a:active {
     padding: 0.5rem 0;
+}
+.portfolioPageWrap .footer .bottomNavBarWrap .creditWrap {
+    color: var(--ternary-color);
 }
 
 .portfolioPageWrap .footer .bottomNavBarWrap .creditWrap .nameWrap {

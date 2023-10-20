@@ -21,4 +21,20 @@
     --dark-mode: #191919;
     --light-content: #a7a7a7;
     
+    /* theme */
+    --primary-color: white;
+    --secondary-color: black;
+    --ternary-color: #666666;
+    --fourth-color: #42446E;
+
+}
+
+.darkTheme{
+/* theme */
+--primary-color: black;
+--secondary-color: white;
+--ternary-color: white;
+--fourth-color: #4545cc;
+--fifth-filter: invert(1);
+
 }
